@@ -1,0 +1,69 @@
+﻿<Window x:Class="Test_Users.Pages.dateTest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Test_Users"
+        mc:Ignorable="d"  WindowStartupLocation="CenterScreen"
+         Height="400" Width="800" IsVisibleChanged="Window_IsVisibleChanged">
+    <Grid Background="DarkTurquoise">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="104"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="104"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="208*"/>
+            <RowDefinition Height="55*"/>
+            <RowDefinition Height="77*"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Button x:Name="button4"  Content="Назад"  
+                       FontFamily="Microsoft Sans Serif" 
+                   FontSize="18"
+                        Background="#FF3F51B5" Click="button4_Click"/>
+        </Grid>
+        <Grid Grid.Column="0" Grid.ColumnSpan="5">
+            <Label Content="Редактор теста" HorizontalAlignment="Center"
+                   FontFamily="Microsoft Sans Serif" 
+                   FontSize="18" Foreground="Black" />
+        </Grid>
+        <DataGrid Name="datagrid" CanUserAddRows="False" 
+                     BorderBrush="Black" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="7"
+                      SelectionMode="Single" Background="#FFFFFF81" 
+                      IsReadOnly="True" ColumnWidth="*" 
+                      HorizontalGridLinesBrush="Black"
+                      VerticalGridLinesBrush="Black"
+                      Foreground="Black" GridLinesVisibility="All">
+            <DataGrid.Columns>
+            </DataGrid.Columns>
+            <DataGrid.ItemContainerStyle>
+                <Style TargetType="DataGridRow">
+                </Style>
+            </DataGrid.ItemContainerStyle>
+            <DataGrid.Resources>
+                <Style BasedOn="{StaticResource {x:Type DataGridColumnHeader}}"
+                       TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Foreground" Value="Black" />
+                </Style>
+            </DataGrid.Resources>
+        </DataGrid>
+
+
+        <Button 
+                Name="button1" Height="30"
+                Content="Добавить вопрос" Click="button1_Click" VerticalAlignment="Center"
+                Grid.Row="3" Grid.Column="1" Margin="15,10,15,0"/>
+        <Button VerticalAlignment="Center"
+                Name="button2" Height="30" 
+                         Content="Изменить вопрос" Click="button2_Click"
+                Grid.Row="3" Grid.Column="3" Margin="15,10,15,0"/>
+        <Button VerticalAlignment="Center"
+                Name="button3" Height="30" 
+                Content="Удалить вопрос" Click="button3_Click"
+                Grid.Row="3" Grid.Column="2" Margin="15,10,15,0"/>
+    </Grid>
+</Window>

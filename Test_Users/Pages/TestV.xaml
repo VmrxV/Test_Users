@@ -1,0 +1,652 @@
+﻿<Window x:Class="Test_Users.Pages.TestV"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Test_Users"
+        mc:Ignorable="d"  WindowStartupLocation="CenterScreen"
+        Height="500" Width="800">
+
+    <Grid Background="DarkTurquoise">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="60*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="36*"/>
+            <RowDefinition Height="314*"/>
+            <RowDefinition Height="44*"/>
+        </Grid.RowDefinitions>
+        <Button Grid.Row="1" Grid.Column="0" Content="1" FontSize="12" Name="v1"
+               BorderBrush="#FFFFFF81" Background="#FFFFFF81" Foreground="Black" Click="v1_Click" Height="Auto" Margin="0,8,0,9"/>
+        <Button Grid.Row="1" Grid.Column="1" Content="2" FontSize="12" Name="v2"
+               BorderBrush="#FFFFFF81" Background="#FFFFFF81" Foreground="Black" Click="v2_Click" Height="Auto" Margin="0,8,0,9"/>
+        <Button Grid.Row="1" Grid.Column="2" Content="3" 
+               BorderBrush="#FFFFFF81" Background="#FFFFFF81" Foreground="Black"
+                FontSize="12" Name="v3" Click="v3_Click" Height="Auto" Margin="0,8,0,9"/>
+        <Button Grid.Row="1" Grid.Column="3" Content="4" FontSize="12" Name="v4"
+               BorderBrush="#FFFFFF81" Background="#FFFFFF81" Foreground="Black" Click="v4_Click" Height="Auto" Margin="0,8,0,9"/>
+        <Button Grid.Row="1" Grid.Column="4" Content="5" FontSize="12" Name="v5" Click="v5_Click"
+               BorderBrush="#FFFFFF81" Background="#FFFFFF81" Foreground="Black" Height="Auto" Margin="0,8,0,9"/>
+        <Button Grid.Row="1" Grid.Column="5" Content="6" FontSize="12" Name="v6"
+               BorderBrush="#FFFFFF81" Background="#FFFFFF81" Foreground="Black" Click="v6_Click" Height="Auto" Margin="0,8,0,9"/>
+        <Button Grid.Row="1" Grid.Column="6" Content="7" FontSize="12" Name="v7" Click="v7_Click"
+               BorderBrush="#FFFFFF81" Background="#FFFFFF81" Foreground="Black" Height="Auto" Margin="0,8,0,9"/>
+        <Button Grid.Row="1" Grid.Column="7" Content="8" FontSize="12" Name="v8" Click="v8_Click"
+               BorderBrush="#FFFFFF81" Background="#FFFFFF81" Foreground="Black" Height="Auto" Margin="0,8,0,9"/>
+        <Button Grid.Row="1" Grid.Column="8" Content="9"  FontSize="12" Name="v9" Click="v9_Click"
+               BorderBrush="#FFFFFF81" Background="#FFFFFF81" Foreground="Black" Height="Auto" Margin="0,8,0,9"/>
+        <Button Grid.Row="1" Grid.Column="9" Content="10"  FontSize="11" Name="v10"
+               BorderBrush="#FFFFFF81" Background="#FFFFFF81" Foreground="Black" Click="v10_Click" Height="Auto" Margin="0,8,0,9"/>
+        <Button Grid.Row="1" Grid.Column="10" Content="11" FontSize="11" Name="v11"
+               BorderBrush="#FFFFFF81" Background="#FFFFFF81" Foreground="Black" Click="v11_Click" Height="Auto" Margin="0,8,0,9"/>
+        <Button Grid.Row="1" Grid.Column="11" Content="12" FontSize="11" Name="v12"
+               BorderBrush="#FFFFFF81" Background="#FFFFFF81" Foreground="Black" Click="v12_Click" Height="Auto" Margin="0,8,0,9"/>
+        <Button Grid.Row="1" Grid.Column="12" Content="13"  FontSize="11" Name="v13"
+               BorderBrush="#FFFFFF81" Background="#FFFFFF81" Foreground="Black" Click="v13_Click" Height="Auto" Margin="0,8,0,9"/>
+        <Button Grid.Row="1" Grid.Column="13" Content="14"  FontSize="11" Name="v14"
+               BorderBrush="#FFFFFF81" Background="#FFFFFF81" Foreground="Black" Click="v14_Click" Height="Auto" Margin="0,8,0,9"/>
+        <Button Grid.Row="1" Grid.Column="14" Content="15" FontSize="12" Name="v15" Click="v15_Click"
+               BorderBrush="#FFFFFF81" Background="#FFFFFF81" Foreground="Black" Height="Auto" Margin="0,8,0,9"/>
+
+        <!--наши тесты-->
+        <!--Вопрос 1-->
+        <ListView  Grid.Row="3" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="16"
+                   Name="list1" Visibility="Visible">
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Вопрос" TextWrapping="Wrap" FontFamily="Microsoft Sans Serif" 
+                   FontSize="21"  VerticalAlignment="Center" HorizontalAlignment="Center" 
+                   Name="label2v1"/>
+
+                <RadioButton Content="Ответ 1" FontSize="21"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad11"
+                         Grid.Row="1"  Grid.ColumnSpan="15" Foreground="Black"/>
+                <RadioButton Content="Ответ 2" FontSize="21"  Margin="80,0,00,10"
+                         FontFamily="Microsoft Sans Serif"   Foreground="Black"
+                         VerticalContentAlignment="Center" Name="rad21"
+                         Grid.Row="2"/>
+                <RadioButton Content="Ответ 3" FontSize="21"  Foreground="Black"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad31"
+                         Grid.Row="3"/>
+                <RadioButton Content="Ответ 4" FontSize="21"  Foreground="Black"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad41"
+                         Grid.Row="4"/>
+            </Grid>
+        </ListView>
+
+        <!--Вопрос 2-->
+        <ListView  Grid.Row="2" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="16"
+                   Name="list2" Visibility="Hidden">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="760"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Вопрос" TextWrapping="Wrap" FontFamily="Microsoft Sans Serif" 
+                   FontSize="21"  VerticalAlignment="Center" HorizontalAlignment="Center" 
+                   Name="label2v2" />
+
+                <RadioButton Content="Ответ 1" FontSize="21"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad12"
+                         Grid.Row="1"  Grid.ColumnSpan="15" Foreground="Black"/>
+                <RadioButton Content="Ответ 2" FontSize="21"  Margin="80,0,00,10"
+                         FontFamily="Microsoft Sans Serif"   Foreground="Black"
+                         VerticalContentAlignment="Center" Name="rad22"
+                         Grid.Row="2"/>
+                <RadioButton Content="Ответ 3" FontSize="21"  Foreground="Black"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad32"
+                         Grid.Row="3"/>
+                <RadioButton Content="Ответ 4" FontSize="21"  Foreground="Black"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad42"
+                         Grid.Row="4"/>
+            </Grid>
+        </ListView>
+
+        <!--Вопрос 3-->
+        <ListView  Grid.Row="2" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="16"
+                   Name="list3" Visibility="Hidden">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="760"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Вопрос" TextWrapping="Wrap" FontFamily="Microsoft Sans Serif" 
+                   FontSize="21"  VerticalAlignment="Center" HorizontalAlignment="Center" 
+                   Name="label2v3" />
+
+                <RadioButton Content="Ответ 1" FontSize="21"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad13"
+                         Grid.Row="1"  Grid.ColumnSpan="15" Foreground="Black"/>
+                <RadioButton Content="Ответ 2" FontSize="21"  Margin="80,0,00,10"
+                         FontFamily="Microsoft Sans Serif"   Foreground="Black"
+                         VerticalContentAlignment="Center" Name="rad23"
+                         Grid.Row="2"/>
+                <RadioButton Content="Ответ 3" FontSize="21"  Foreground="Black"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad33"
+                         Grid.Row="3"/>
+                <RadioButton Content="Ответ 4" FontSize="21"  Foreground="Black"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad43"
+                         Grid.Row="4"/>
+            </Grid>
+        </ListView>
+
+        <!--Вопрос 4-->
+        <ListView  Grid.Row="2" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="16"
+                   Name="list4" Visibility="Hidden">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="760"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Вопрос" TextWrapping="Wrap" FontFamily="Microsoft Sans Serif" 
+                   FontSize="21"  VerticalAlignment="Center" HorizontalAlignment="Center" 
+                   Name="label2v4" />
+
+                <RadioButton Content="Ответ 1" FontSize="21"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad14"
+                         Grid.Row="1"  Grid.ColumnSpan="15" Foreground="Black"/>
+                <RadioButton Content="Ответ 2" FontSize="21"  Margin="80,0,00,10"
+                         FontFamily="Microsoft Sans Serif"   Foreground="Black"
+                         VerticalContentAlignment="Center" Name="rad24"
+                         Grid.Row="2"/>
+                <RadioButton Content="Ответ 3" FontSize="21"  Foreground="Black"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad34"
+                         Grid.Row="3"/>
+                <RadioButton Content="Ответ 4" FontSize="21"  Foreground="Black"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad44"
+                         Grid.Row="4"/>
+            </Grid>
+        </ListView>
+        <!--Вопрос 5-->
+        <ListView  Grid.Row="2" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="16"
+                   Name="list5" Visibility="Hidden">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="760"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Вопрос" TextWrapping="Wrap" FontFamily="Microsoft Sans Serif" 
+                   FontSize="21"  VerticalAlignment="Center" HorizontalAlignment="Center" 
+                   Name="label2v5" />
+
+                <RadioButton Content="Ответ 1" FontSize="21"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad15"
+                         Grid.Row="1"  Grid.ColumnSpan="15" Foreground="Black"/>
+                <RadioButton Content="Ответ 2" FontSize="21"  Margin="80,0,00,10"
+                         FontFamily="Microsoft Sans Serif"   Foreground="Black"
+                         VerticalContentAlignment="Center" Name="rad25"
+                         Grid.Row="2"/>
+                <RadioButton Content="Ответ 3" FontSize="21"  Foreground="Black"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad35"
+                         Grid.Row="3"/>
+                <RadioButton Content="Ответ 4" FontSize="21"  Foreground="Black"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad45"
+                         Grid.Row="4"/>
+
+            </Grid>
+        </ListView>
+        <!--Вопрос 6-->
+        <ListView  Grid.Row="2" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="16"
+                   Name="list6" Visibility="Hidden">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="760"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Вопрос" TextWrapping="Wrap" FontFamily="Microsoft Sans Serif" 
+                   FontSize="21"  VerticalAlignment="Center" HorizontalAlignment="Center" 
+                   Name="label2v6" />
+
+                <RadioButton Content="Ответ 1" FontSize="21"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad16"
+                         Grid.Row="1"  Grid.ColumnSpan="15" Foreground="Black"/>
+                <RadioButton Content="Ответ 2" FontSize="21"  Margin="80,0,00,10"
+                         FontFamily="Microsoft Sans Serif"   Foreground="Black"
+                         VerticalContentAlignment="Center" Name="rad26"
+                         Grid.Row="2"/>
+                <RadioButton Content="Ответ 3" FontSize="21"  Foreground="Black"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad36"
+                         Grid.Row="3"/>
+                <RadioButton Content="Ответ 4" FontSize="21"  Foreground="Black"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad46"
+                         Grid.Row="4"/>
+            </Grid>
+        </ListView>
+        <!--Вопрос 7-->
+        <ListView  Grid.Row="2" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="16"
+                   Name="list7" Visibility="Hidden">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="760"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Вопрос" TextWrapping="Wrap" FontFamily="Microsoft Sans Serif" 
+                   FontSize="21"  VerticalAlignment="Center" HorizontalAlignment="Center" 
+                   Name="label2v7" />
+
+                <RadioButton Content="Ответ 1" FontSize="21"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad17"
+                         Grid.Row="1"  Grid.ColumnSpan="15" Foreground="Black"/>
+                <RadioButton Content="Ответ 2" FontSize="21"  Margin="80,0,00,10"
+                         FontFamily="Microsoft Sans Serif"   Foreground="Black"
+                         VerticalContentAlignment="Center" Name="rad27"
+                         Grid.Row="2"/>
+                <RadioButton Content="Ответ 3" FontSize="21"  Foreground="Black"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad37"
+                         Grid.Row="3"/>
+                <RadioButton Content="Ответ 4" FontSize="21"  Foreground="Black"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad47"
+                         Grid.Row="4"/>
+            </Grid>
+        </ListView>
+        <!--Вопрос 8-->
+        <ListView  Grid.Row="2" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="16"
+                   Name="list8" Visibility="Hidden">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="760"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Вопрос" TextWrapping="Wrap" FontFamily="Microsoft Sans Serif" 
+                   FontSize="21"  VerticalAlignment="Center" HorizontalAlignment="Center" 
+                   Name="label2v8" />
+
+                <RadioButton Content="Ответ 1" FontSize="21"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad18"
+                         Grid.Row="1"  Grid.ColumnSpan="15" Foreground="Black"/>
+                <RadioButton Content="Ответ 2" FontSize="21"  Margin="80,0,00,10"
+                         FontFamily="Microsoft Sans Serif"   Foreground="Black"
+                         VerticalContentAlignment="Center" Name="rad28"
+                         Grid.Row="2"/>
+                <RadioButton Content="Ответ 3" FontSize="21"  Foreground="Black"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad38"
+                         Grid.Row="3"/>
+                <RadioButton Content="Ответ 4" FontSize="21"  Foreground="Black"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad48"
+                         Grid.Row="4"/>
+            </Grid>
+        </ListView>
+        <!--Вопрос 9-->
+        <ListView  Grid.Row="2" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="16"
+                   Name="list9" Visibility="Hidden">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="760"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Вопрос" TextWrapping="Wrap" FontFamily="Microsoft Sans Serif" 
+                   FontSize="21"  VerticalAlignment="Center" HorizontalAlignment="Center" 
+                   Name="label2v9" />
+
+                <RadioButton Content="Ответ 1" FontSize="21"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad19"
+                         Grid.Row="1"  Grid.ColumnSpan="15" Foreground="Black"/>
+                <RadioButton Content="Ответ 2" FontSize="21"  Margin="80,0,00,10"
+                         FontFamily="Microsoft Sans Serif"   Foreground="Black"
+                         VerticalContentAlignment="Center" Name="rad29"
+                         Grid.Row="2"/>
+                <RadioButton Content="Ответ 3" FontSize="21"  Foreground="Black"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad39"
+                         Grid.Row="3"/>
+                <RadioButton Content="Ответ 4" FontSize="21"  Foreground="Black"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad49"
+                         Grid.Row="4"/>
+            </Grid>
+        </ListView>
+        <!--Вопрос 10-->
+        <ListView  Grid.Row="2" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="16"
+                   Name="list10" Visibility="Hidden">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="760"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Вопрос" TextWrapping="Wrap" FontFamily="Microsoft Sans Serif" 
+                   FontSize="21"  VerticalAlignment="Center" HorizontalAlignment="Center" 
+                   Name="label2v10" />
+
+                <RadioButton Content="Ответ 1" FontSize="21"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad110"
+                         Grid.Row="1"  Grid.ColumnSpan="15" Foreground="Black"/>
+                <RadioButton Content="Ответ 2" FontSize="21"  Margin="80,0,00,10"
+                         FontFamily="Microsoft Sans Serif"   Foreground="Black"
+                         VerticalContentAlignment="Center" Name="rad210"
+                         Grid.Row="2"/>
+                <RadioButton Content="Ответ 3" FontSize="21"  Foreground="Black"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad310"
+                         Grid.Row="3"/>
+                <RadioButton Content="Ответ 4" FontSize="21"  Foreground="Black"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad410"
+                         Grid.Row="4"/>
+            </Grid>
+        </ListView>
+        <!--Вопрос 11-->
+        <ListView  Grid.Row="2" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="16"
+                   Name="list11" Visibility="Hidden">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="760"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Вопрос" TextWrapping="Wrap" FontFamily="Microsoft Sans Serif" 
+                   FontSize="21"  VerticalAlignment="Center" HorizontalAlignment="Center" 
+                   Name="label2v11" />
+
+                <RadioButton Content="Ответ 1" FontSize="21"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad111"
+                         Grid.Row="1"  Grid.ColumnSpan="15" Foreground="Black"/>
+                <RadioButton Content="Ответ 2" FontSize="21"  Margin="80,0,00,10"
+                         FontFamily="Microsoft Sans Serif"   Foreground="Black"
+                         VerticalContentAlignment="Center" Name="rad211"
+                         Grid.Row="2"/>
+                <RadioButton Content="Ответ 3" FontSize="21"  Foreground="Black"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad311"
+                         Grid.Row="3"/>
+                <RadioButton Content="Ответ 4" FontSize="21"  Foreground="Black"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad411"
+                         Grid.Row="4"/>
+            </Grid>
+        </ListView>
+        <!--Вопрос 12-->
+        <ListView  Grid.Row="2" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="16"
+                   Name="list12" Visibility="Hidden">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="760"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Вопрос" TextWrapping="Wrap" FontFamily="Microsoft Sans Serif" 
+                   FontSize="21"  VerticalAlignment="Center" HorizontalAlignment="Center" 
+                   Name="label2v12" />
+
+                <RadioButton Content="Ответ 1" FontSize="21"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad112"
+                         Grid.Row="1"  Grid.ColumnSpan="15" Foreground="Black"/>
+                <RadioButton Content="Ответ 2" FontSize="21"  Margin="80,0,00,10"
+                         FontFamily="Microsoft Sans Serif"   Foreground="Black"
+                         VerticalContentAlignment="Center" Name="rad212"
+                         Grid.Row="2"/>
+                <RadioButton Content="Ответ 3" FontSize="21"  Foreground="Black"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad312"
+                         Grid.Row="3"/>
+                <RadioButton Content="Ответ 4" FontSize="21"  Foreground="Black"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad412"
+                         Grid.Row="4"/>
+            </Grid>
+        </ListView>
+
+        <!--Вопрос 13-->
+        <ListView  Grid.Row="2" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="16"
+                   Name="list13" Visibility="Hidden">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="760"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Вопрос" TextWrapping="Wrap" FontFamily="Microsoft Sans Serif" 
+                   FontSize="21"  VerticalAlignment="Center" HorizontalAlignment="Center" 
+                   Name="label2v13" />
+
+                <RadioButton Content="Ответ 1" FontSize="21"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad113"
+                         Grid.Row="1"  Grid.ColumnSpan="15" Foreground="Black"/>
+                <RadioButton Content="Ответ 2" FontSize="21"  Margin="80,0,00,10"
+                         FontFamily="Microsoft Sans Serif"   Foreground="Black"
+                         VerticalContentAlignment="Center" Name="rad213"
+                         Grid.Row="2"/>
+                <RadioButton Content="Ответ 3" FontSize="21"  Foreground="Black"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad313"
+                         Grid.Row="3"/>
+                <RadioButton Content="Ответ 4" FontSize="21"  Foreground="Black"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad413"
+                         Grid.Row="4"/>
+            </Grid>
+        </ListView>
+
+        <!--Вопрос 14-->
+        <ListView  Grid.Row="2" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="16"
+                   Name="list14" Visibility="Hidden">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="760"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Вопрос" TextWrapping="Wrap" FontFamily="Microsoft Sans Serif" 
+                   FontSize="21"  VerticalAlignment="Center" HorizontalAlignment="Center" 
+                   Name="label2v14" />
+
+                <RadioButton Content="Ответ 1" FontSize="21"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad114"
+                         Grid.Row="1"  Grid.ColumnSpan="15" Foreground="Black"/>
+                <RadioButton Content="Ответ 2" FontSize="21"  Margin="80,0,00,10"
+                         FontFamily="Microsoft Sans Serif"   Foreground="Black"
+                         VerticalContentAlignment="Center" Name="rad214"
+                         Grid.Row="2"/>
+                <RadioButton Content="Ответ 3" FontSize="21"  Foreground="Black"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad314"
+                         Grid.Row="3"/>
+                <RadioButton Content="Ответ 4" FontSize="21"  Foreground="Black"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad414"
+                         Grid.Row="4"/>
+            </Grid>
+        </ListView>
+        <!--Вопрос 15-->
+        <ListView  Grid.Row="2" Grid.RowSpan="3" Grid.Column="0" Grid.ColumnSpan="16"
+                   Name="list15" Visibility="Hidden">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                    <RowDefinition Height="75*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="760"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Вопрос" TextWrapping="Wrap" FontFamily="Microsoft Sans Serif" 
+                   FontSize="21"  VerticalAlignment="Center" HorizontalAlignment="Center" 
+                   Name="label2v15" />
+
+                <RadioButton Content="Ответ 1" FontSize="21"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad115"
+                         Grid.Row="1"  Grid.ColumnSpan="15" Foreground="Black"/>
+                <RadioButton Content="Ответ 2" FontSize="21"  Margin="80,0,00,10"
+                         FontFamily="Microsoft Sans Serif"   Foreground="Black"
+                         VerticalContentAlignment="Center" Name="rad215"
+                         Grid.Row="2"/>
+                <RadioButton Content="Ответ 3" FontSize="21"  Foreground="Black"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad315"
+                         Grid.Row="3"/>
+                <RadioButton Content="Ответ 4" FontSize="21"  Foreground="Black"
+                         FontFamily="Microsoft Sans Serif"  Margin="80,0,00,10"
+                         VerticalContentAlignment="Center" Name="rad415"
+                         Grid.Row="4"/>
+            </Grid>
+        </ListView>
+
+        <Label Content="Вопрос 1 из 15" FontFamily="Microsoft Sans Serif" 
+                   FontSize="19" Grid.Row="0" Grid.ColumnSpan="4"
+                   HorizontalAlignment="Center" Name="label1" Grid.Column="7"
+               Margin="12,0,12,45" Grid.RowSpan="2" Width="152"/>
+        <Button  Content="Далее" FontFamily="Microsoft Sans Serif" 
+                   FontSize="16" Name="button2" Click="button2_Click"
+                   Grid.Row="4"  Grid.ColumnSpan="4" HorizontalAlignment="Center"
+                     VerticalAlignment="Center" Grid.Column="7"/>
+
+        <Grid Grid.Row="1" Grid.Column="15">
+            <StackPanel HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                <Label Content="00:00" FontSize="21" Name="Time_test"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Margin="0,0,40,0">
+        </Grid>
+        <Label Content="Осталось времени:" FontFamily="Microsoft Sans Serif" 
+                     HorizontalAlignment="Center" FontSize="14"
+               Grid.Row="0" Grid.Column="15" Width="132"/>
+    </Grid>
+</Window>

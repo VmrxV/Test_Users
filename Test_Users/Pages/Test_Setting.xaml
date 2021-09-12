@@ -1,0 +1,59 @@
+﻿<Window x:Class="Test_Users.Pages.Test_Setting"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Test_Users.Pages"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        mc:Ignorable="d"
+       
+        Height="700" Width="800" WindowStartupLocation="CenterScreen"
+        IsVisibleChanged="Window_IsVisibleChanged">
+    <Grid Background="#FFDADADA">
+        <Border Margin="15" MinWidth="400" Background="White" 
+                VerticalAlignment="Center" Padding="20" 
+                CornerRadius="10" MaxWidth="900">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" 
+                                  ShadowDepth="0"/>
+            </Border.Effect>
+            <StackPanel Height="700" >
+                <TextBlock Text="Создание теста" Name="label1" FontSize="30" 
+                           FontWeight="Bold"/>
+                <TextBox materialDesign:HintAssist.Hint="Название" Name="textbox1"
+                         FontSize="16"
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 5"/>
+                <TextBox materialDesign:HintAssist.Hint="Время прохождения в минутах" Name="textbox2"
+                         FontSize="16"
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 5"/>
+                <Label Content="Выберите 15 вопросов" Foreground="Black" FontSize="16"/>
+                <DataGrid x:Name="DgVopros" CanUserAddRows="False" 
+                      BorderBrush="Black" Height="150"
+                       Background="#FFFFFF81" FontSize="10"
+                      IsReadOnly="True" ColumnWidth="*" 
+                      HorizontalGridLinesBrush="Black"
+                      VerticalGridLinesBrush="Black"
+                      Foreground="Black" >
+                    <DataGrid.Columns >
+                        <DataGridCheckBoxColumn IsReadOnly="False"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <Label Content="Выберите пользователя(лей)" Foreground="Black"/>
+                <DataGrid x:Name="DgUsers" CanUserAddRows="False" 
+                      BorderBrush="Black" Height="150" FontSize="14"
+                      SelectionMode="Single" Background="#FFFFFF81" 
+                      IsReadOnly="True" ColumnWidth="*" 
+                      HorizontalGridLinesBrush="Black"
+                      VerticalGridLinesBrush="Black"
+                      Foreground="Black" GridLinesVisibility="All" >
+                    <DataGrid.Columns >
+                        <DataGridCheckBoxColumn IsReadOnly="False" />
+                    </DataGrid.Columns>
+                </DataGrid>
+                <Button Content="Продолжить"  Name="button3"
+                        Margin="0 10" Click="button3_Click"/>
+                <Button Content="Назад"  Name="Bage" Click="Bage_Click"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

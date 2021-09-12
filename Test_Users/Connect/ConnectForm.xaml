@@ -1,0 +1,43 @@
+﻿<Window x:Class="Test_Users.Connect.ConnectForm"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Test_Users"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        mc:Ignorable="d"
+       
+        Height="550" Width="500" WindowStartupLocation="CenterScreen">
+    <Grid Background="#FFDADADA">
+        <Border Margin="15" MinWidth="400" Background="White" 
+                VerticalAlignment="Center" Padding="30" 
+                CornerRadius="10" MaxWidth="800">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" 
+                                  ShadowDepth="0"/>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Подключение к серверу" FontSize="30" 
+                           FontWeight="Bold" Margin="0 0 0 20" />
+                <TextBox materialDesign:HintAssist.Hint="Сервер:" Name="tbServer"
+                         FontSize="16" Text="localhost"
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 5"/>
+                <TextBox materialDesign:HintAssist.Hint="Имя пользователя" Name="tbUserID"
+                         FontSize="16" Text="root"
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 5"/>
+                <TextBox materialDesign:HintAssist.Hint="Пароль" Name="tbPassword"
+                         FontSize="16" Text="root"
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 5"/>
+                <TextBox materialDesign:HintAssist.Hint="База Данных" Name="tbDatebase"
+                         FontSize="16" Text="sql12388390"
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 5"/>
+                <TextBox materialDesign:HintAssist.Hint="Порт" Name="tbPort"
+                         FontSize="16" Text="3307"
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0 5"/>
+                <Button Content="Проверить подлючение"  Name="Proverka" 
+                        Click="Proverka_Click"/>
+                <Button Content="Назад" Name="bage" Margin="0,10,0,0" HorizontalAlignment="Center" Click="bage_Click"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
